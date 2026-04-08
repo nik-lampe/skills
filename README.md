@@ -23,3 +23,17 @@ npx skills add zirkelc/skills
   ```bash
   npx skills add zirkelc/skills/pr
   ```
+
+### Scaffolding
+
+- **typescript-package** — Scaffold a new TypeScript package from the [template-single-typescript](https://github.com/zirkelc/template-single-typescript) template.
+
+  ```bash
+  npx skills add zirkelc/skills/typescript-package
+  ```
+
+- **vscode-extension** — Scaffold a new VS Code extension from the [template-vscode-extension](https://github.com/zirkelc/template-vscode-extension) template.
+
+  ```bash
+  npx skills add zirkelc/skills/vscode-extension
+  ```
