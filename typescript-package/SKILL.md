@@ -1,11 +1,11 @@
 ---
 name: typescript-package
-description: Scaffold a new TypeScript package project from the zirkelc/template-single-typescript GitHub template. Creates the GitHub repo, clones it, updates placeholders, and opens it in VS Code.
+description: Scaffold a new TypeScript package project from the zirkelc/template-typescript-package GitHub template. Creates the GitHub repo, clones it, updates placeholders, and opens it in VS Code.
 ---
 
 # New TypeScript Package
 
-Scaffold a new TypeScript package from the [template-single-typescript](https://github.com/zirkelc/template-single-typescript) template.
+Scaffold a new TypeScript package from the [template-typescript-package](https://github.com/zirkelc/template-typescript-package) template.
 
 ## Step 1: Gather Project Info
 
@@ -25,7 +25,7 @@ Check the current working directory with `pwd` and `ls`.
 In this case, create the repo without `--clone`, then clone into `.`:
 ```bash
 gh repo create <name> \
-  --template zirkelc/template-single-typescript \
+  --template zirkelc/template-typescript-package \
   --description "<description>" \
   --[public|private] \
   --gitignore ""
@@ -36,7 +36,7 @@ git clone "$(gh repo view <name> --json url -q .url)" .
 **Not in the project dir** — clone into a new subdirectory. Run from `~/Developer`:
 ```bash
 gh repo create <name> \
-  --template zirkelc/template-single-typescript \
+  --template zirkelc/template-typescript-package \
   --description "<description>" \
   --[public|private] \
   --clone \
@@ -49,13 +49,13 @@ The project dir is referred to as `<project-dir>` in subsequent steps (either CW
 
 ## Step 3: Update Placeholders
 
-Read `package.json` in `<project-dir>`. Identify all placeholder values (typically `template-single-typescript`, `zirkelc`, generic description strings) and replace them with the user's values:
+Read `package.json` in `<project-dir>`. Identify all placeholder values (typically `template-typescript-package`, `zirkelc`, generic description strings) and replace them with the user's values:
 
 | Placeholder | Replace with |
 |---|---|
-| `template-single-typescript` | `<name>` |
+| `template-typescript-package` | `<name>` |
 | Package `description` field | `<description>` |
-| Repository URLs containing `template-single-typescript` | updated with `<name>` |
+| Repository URLs containing `template-typescript-package` | updated with `<name>` |
 
 Also scan `README.md` for the template title/description and replace with the project's name and description.
 
