@@ -7,20 +7,20 @@ description: Create a git commit with an auto-generated conventional commit mess
 
 Create a commit with an auto-generated message summarizing the relevant changes for the current task.
 
-## Step 1: Gather Changes
+## Repository Context
 
-Run these commands in parallel:
-- `git status` — see untracked and modified files
-- `git diff` — unstaged changes
-- `git diff --cached` — staged changes
-- `git log -5 --format='%h %s'` — recent commits for message style reference
+- Working tree status: !`git status`
+- Unstaged changes: !`git diff`
+- Staged changes: !`git diff --cached`
+- Recent commits (style reference): !`git log -5 --format='%h %s'`
 
-If there are no changes (nothing staged, unstaged, or untracked): stop and tell the user there's nothing to commit.
+## Step 1: Check for Changes
 
-## Step 2: Read Changed Files
+If there are no changes in the context above (nothing staged, unstaged, or untracked): stop and tell the user there's nothing to commit.
 
-For untracked files shown in `git status`, read them to understand their contents.
-For modified files, the diff output is sufficient.
+## Step 2: Read Untracked Files
+
+For untracked files shown in the status above, read them with the Read tool to understand their contents. Diffs already cover modified files.
 
 ## Step 3: Filter to Relevant Changes
 
