@@ -64,7 +64,13 @@ EOF
 
 3. Run `git status` to verify the commit succeeded.
 
-## Step 6: Ask About Push
+## Step 6: Print Summary
+
+Print a summary of the commit to the user:
+- The commit message (subject and body)
+- A bulleted list of files included in the commit (from `git show --name-only --format= HEAD`)
+
+## Step 7: Ask About Push
 
 After a successful commit, ask the user: **"Push to remote?"**
 

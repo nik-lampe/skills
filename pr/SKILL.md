@@ -51,4 +51,11 @@ Only use the confirmed-relevant changes when drafting the PR below.
 1. If upstream tracking is `none` in the context, push with: `git push -u origin HEAD`
 2. Otherwise, push with: `git push`
 3. Create the PR: `gh pr create --base <base> --title "<title>" --body "<body>"` using a HEREDOC for the body
-4. Return the PR URL to the user
+
+## Step 5: Print Summary
+
+Print a summary of the PR to the user:
+- The PR title
+- The PR body (Summary and Test plan sections)
+- A bulleted list of files included in the PR (from `git diff --name-only <base>...HEAD`)
+- The PR URL
