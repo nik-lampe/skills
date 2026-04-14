@@ -74,5 +74,5 @@ Print a summary of the commit to the user:
 
 After a successful commit, ask the user: **"Push to remote?"**
 
-- If yes: check for upstream with `git rev-parse --abbrev-ref @{upstream} 2>/dev/null`, then `git push -u origin HEAD` (no upstream) or `git push` (has upstream)
+- If yes: check for upstream with `git rev-parse --abbrev-ref @{upstream} 2>/dev/null`, then `git push -u origin HEAD` (no upstream) or `git push` (has upstream). After a successful push, print the remote commit URL (from `gh browse $(git rev-parse HEAD) --no-browser`).
 - If no: done
